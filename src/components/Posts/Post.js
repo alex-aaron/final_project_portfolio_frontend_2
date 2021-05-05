@@ -3,18 +3,14 @@ import React, { Component } from 'react';
 
 class Post extends Component {
 
-  handleOnClick = () => {
-    this.props.deletePost(this.props.post.id)
-  }
+
   render() {
 
 
     return (
       <div>
-        <li>
-          {this.props.posts.text}
-          <button onClick={this.handleOnClick}> Delete </button>
-        </li>
+        <h3>{this.props.post.title}</h3>
+        <p>{this.props.post.text}</p>
       </div>
     );
   }

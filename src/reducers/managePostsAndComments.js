@@ -1,4 +1,6 @@
-export default function managePostsAndRestaurants(state = {
+import cuid from 'cuid';
+
+export default function managePostsAndComments(state = {
     posts: [],
     comments: []
   }, action) {
@@ -6,9 +8,9 @@ export default function managePostsAndRestaurants(state = {
       case 'ADD_POST':
 
         const post = {
-            id: 1,
-            title: action.title,
-            text: action.text
+            id: cuid(),
+            title: action.post.title,
+            text: action.post.text
         }
         return { ...state, posts: [...state.posts, post] }
       case 'DELETE_POST':
@@ -17,7 +19,7 @@ export default function managePostsAndRestaurants(state = {
     
       case 'ADD_COMMENT':
         const comment = {
-          id: 1,
+          id: cuid(),
           postId: action.comment.postId,
           text: action.comment.text
         }

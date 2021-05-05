@@ -10,7 +10,13 @@ class PostInput extends Component {
       }
   }
 
-  handleOnChange = event => {
+  handleOnTitleChange = event => {
+    this.setState({
+      title: event.target.value
+    })
+  }
+
+  handleOnContentChange = event => {
     this.setState({
       text: event.target.value
     })
@@ -18,14 +24,18 @@ class PostInput extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.addPost(this.state.text);
+    this.props.addPost({title: this.state.title, text: this.state.text});
   }
 
   render() {
     return (
       <div>
+        <h1>What are you watching right now?</h1>
         <form onSubmit={this.handleOnSubmit}>
-          <input type="text" onChange={event => this.handleOnChange(event)} />
+          <label>Show/Movie Title:</label>
+          <input type="text" id="title" onChange={event => this.handleOnTitleChange(event)}/><br /><br />
+          <label>Post:</label>
+          <input type="text" onChange={event => this.handleOnContentChange(event)} /><br /><br />
           <input type="submit"/>
         </form>
       </div>

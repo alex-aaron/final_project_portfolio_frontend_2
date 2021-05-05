@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Post from '../Posts/Post'
 
 class Posts extends Component {
+
+  componentDidMount() {
+    this.props.fetchPosts();
+  }
   
   renderPosts = () => {
     return (
@@ -10,9 +14,9 @@ class Posts extends Component {
   
   render() {
     return(
-      <ul>
+      <div>
         {this.renderPosts()}
-      </ul>
+      </div>
     );
   }
 };
