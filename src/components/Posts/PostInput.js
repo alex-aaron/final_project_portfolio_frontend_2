@@ -25,6 +25,13 @@ class PostInput extends Component {
   handleOnSubmit = event => {
     event.preventDefault();
     this.props.addPost({title: this.state.title, text: this.state.text});
+    fetch('http://localhost:3001/posts', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({title: this.state.title, content: this.state.text})
+    })
   }
 
   render() {
