@@ -5,6 +5,12 @@ export default function managePostsAndComments(state = {
     comments: []
   }, action) {
     switch (action.type) {
+      case 'LOADING_POSTS':
+      return {
+        ...state,
+        posts: [...state.posts],
+        loading: true
+      }
       case 'ADD_POST':
 
         const post = {

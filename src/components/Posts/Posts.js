@@ -4,6 +4,7 @@ import Post from '../Posts/Post'
 class Posts extends Component {
 
   componentDidMount() {
+    console.log("Component Mounted!");
     this.props.fetchPosts();
   }
   
