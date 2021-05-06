@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Post from '../Posts/Post'
+import PostLink from '../Posts/PostLink'
 
 class Posts extends Component {
 
@@ -8,6 +9,7 @@ class Posts extends Component {
     this.props.posts.map(post => 
       <div>
         <Post key={post.id} post={post} deletePost={this.props.deletePost} />
+        <PostLink key={post.id} />
       </div>))
   }
 
