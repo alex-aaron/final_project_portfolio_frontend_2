@@ -3,15 +3,16 @@ import Post from '../Posts/Post'
 
 class Posts extends Component {
 
-  componentDidMount() {
-    console.log("Component Mounted!");
-    this.props.fetchPosts();
-  }
-  
   renderPosts = () => {
     return (
     this.props.posts.map(post => <Post key={post.id} post={post} deletePost={this.props.deletePost} />))
   }
+
+  componentDidMount() {
+    console.log("Component Mounted!");
+    this.props.fetchPosts()
+  }
+  
   
   render() {
     return(

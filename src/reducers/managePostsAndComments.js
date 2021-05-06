@@ -2,7 +2,8 @@ import cuid from 'cuid';
 
 export default function managePostsAndComments(state = {
     posts: [],
-    comments: []
+    comments: [],
+    loading: false
   }, action) {
     switch (action.type) {
       case 'LOADING_POSTS':
@@ -18,7 +19,15 @@ export default function managePostsAndComments(state = {
             title: action.post.title,
             text: action.post.text
         }
-        return { ...state, posts: [...state.posts, post] }
+        return { ...state, posts: [...state.posts, post] };
+
+      case 'ADD_POSTS': 
+        let postArr = action.posts
+
+        for (const element of postArr) {
+          state = { ...state, posts: [...state.posts, { id: element.id, title: element.title, text: element.content} ] }
+        }
+
       case 'DELETE_POST':
         const posts = state.posts.filter(post => post.id !== action.id);
         return { ...state, posts };
