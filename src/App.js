@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path="/" component={PostContainer} />
-        <Route to={`/posts/:postId`} render={routerProps => <PostShow {...routerProps} />} />
+        <Route exact path={`/posts/:postId`} render={routerProps => <PostShow {...routerProps} />} />
       </div>
     </Router>
   );
