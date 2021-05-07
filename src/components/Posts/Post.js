@@ -8,7 +8,7 @@ class Post extends Component {
 
 
     return (
-      <div>
+      <div id={this.props.post.id}>
         <h3>{this.props.post.title}</h3>
         <p>{this.props.post.text}</p>
       </div>

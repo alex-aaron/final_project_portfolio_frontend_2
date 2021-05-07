@@ -1,5 +1,6 @@
 import PostContainer from './containers/PostContainer';
-import PostInput from './components/Posts/PostInput';
+import PostShow from './components/Posts/PostShow'
+// import PostInput from './components/Posts/PostInput';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -12,7 +13,7 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path="/" component={PostContainer} />
-        <Route exact path="/new" component={PostInput} />
+        <Route to={`/posts/:postId`} render={routerProps => <PostShow {...routerProps} />} />
       </div>
     </Router>
   );

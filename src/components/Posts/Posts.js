@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import Post from '../Posts/Post'
-import PostLink from '../Posts/PostLink'
+import Post from '../Posts/Post';
+// import PostLink from '../Posts/PostLink'
+import { Link } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
+// import PostShow from '../Posts/PostShow';
+// import PostShow from '../Posts/PostShow';
+
 
 class Posts extends Component {
 
@@ -9,7 +14,8 @@ class Posts extends Component {
     this.props.posts.map(post => 
       <div>
         <Post key={post.id} post={post} deletePost={this.props.deletePost} />
-        <PostLink key={post.id} />
+        <Link to={`/posts/${post.id}`} postId={post.id}>See Post</Link>
+        {/* <PostLink key={post.id} /> */}
       </div>))
   }
 
@@ -23,6 +29,7 @@ class Posts extends Component {
     return(
       <div>
         {this.renderPosts()}
+        {/* <Route path={`${match.url}/:movieId`} component={PostShow} posts={this.props.posts} /> */}
       </div>
     );
   }
