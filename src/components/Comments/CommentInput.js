@@ -10,14 +10,14 @@ class CommentInput extends Component {
       }
   }
 
-  handleOnChange = event => {
+  handleOnCommentChange = event => {
     this.setState({
       postId: parseInt(this.props.postId),
       text: event.target.value
     })
   }
 
-  handleOnSubmit = event => {
+  handleOnCommentSubmit = event => {
     event.preventDefault();
     this.props.addComment({postId: this.state.postId, text: this.state.text});
     fetch('http://localhost:3001/comments', {
@@ -25,16 +25,16 @@ class CommentInput extends Component {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({postId: this.state.postId, content: this.state.text})
+      body: JSON.stringify({post_id: this.state.postId, content: this.state.text})
     })
   }
 
   render() {
     return (
       <div>
-        <form>
-        <input type="text" id="content" onChange={event => this.handleOnChange(event)} />
-        <input type="submit" onSubmit={this.handleOnSubmit} />
+        <form onSubmit={event => this.handleOnCommentSubmit(event)}>
+        <input type="text" id="content" onChange={event => this.handleOnCommentChange(event)} />
+        <input type="submit" />
         </form>
       </div>
     );

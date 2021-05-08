@@ -20,7 +20,7 @@ class CommentContainer extends Component {
     return (
       <div>
         {this.renderComments()}
-        <CommentInput postId={this.props.postId} />
+        <CommentInput postId={this.props.postId} addComment={this.props.addComment} />
       </div>
     )
   }
