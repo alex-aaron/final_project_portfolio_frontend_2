@@ -29,7 +29,6 @@ class Posts extends Component {
     return(
       <div>
         {this.renderPosts()}
-        {/* <Route path={`${match.url}/:movieId`} component={PostShow} posts={this.props.posts} /> */}
       </div>
     );
   }
