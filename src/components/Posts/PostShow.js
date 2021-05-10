@@ -44,8 +44,9 @@ class PostShow extends Component {
     console.log(this.state.comments)
     return (
       <div>
-          <h1>Post Show Component</h1>
+          <h1>View Post</h1>
           {this.renderPost(this.state.post)}
+          <br></br>
           <CommentContainer comments={this.state.comments} postId={parseInt(this.props.location.pathname.split("/")[2])} />
       </div>
     );

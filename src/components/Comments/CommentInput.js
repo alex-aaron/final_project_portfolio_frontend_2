@@ -31,10 +31,13 @@ class CommentInput extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container p-3 my-3 bg-dark text-white">
         <form onSubmit={event => this.handleOnCommentSubmit(event)}>
-        <input type="text" id="content" onChange={event => this.handleOnCommentChange(event)} />
-        <input type="submit" />
+          <div>
+            <label className="form-label>">Add Comment:</label>
+            <input type="text" id="content" onChange={event => this.handleOnCommentChange(event)} className="form-control"/><br />
+            <button type="submit" className="btn btn-primary">Submit</button>
+          </div>
         </form>
       </div>
     );

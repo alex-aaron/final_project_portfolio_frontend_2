@@ -25,7 +25,7 @@ export default function managePostsAndComments(state = {
         let postArr = action.posts
 
         for (const element of postArr) {
-          state = { ...state, posts: [...state.posts, { id: element.id, title: element.title, text: element.content} ] }
+          state = { ...state, posts: [...state.posts, { id: element.id, title: element.title, text: element.content, createdAt: element.created_at, updatedAt: element.updated_at} ] }
         }
 
       case 'DELETE_POST':

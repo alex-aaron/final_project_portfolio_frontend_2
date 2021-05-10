@@ -19,8 +19,8 @@ class CommentContainer extends Component {
     console.log(this.props.comments)
     return (
       <div>
-        {this.renderComments()}
         <CommentInput postId={this.props.postId} addComment={this.props.addComment} />
+        {this.renderComments()}
       </div>
     )
   }

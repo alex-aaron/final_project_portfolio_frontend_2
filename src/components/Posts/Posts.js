@@ -14,8 +14,6 @@ class Posts extends Component {
     this.props.posts.map(post => 
       <div>
         <Post key={post.id} post={post} deletePost={this.props.deletePost} />
-        <Link to={`/posts/${post.id}`} postId={post.id}>See Post</Link>
-        {/* <PostLink key={post.id} /> */}
       </div>))
   }
 

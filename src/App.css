@@ -8,16 +8,14 @@
   text-align: center;
 }
 
-/* .post-input-container {
-  display:flex;
+.post-input-container {
+  padding: 10px;
 }
 
-.post-input {
-  border-color: black;
-  border-width: 5px;
-  border-style: solid;
-  padding: 10px;
-} */
+img {
+  height: 50px;
+  width: 50px;
+}
 
 .App-logo {
   height: 40vmin;

@@ -37,11 +37,10 @@ class PostInput extends Component {
 
   render() {
     return (
-      <div className="post-input-container">
-        <h5>What are you watching right now?</h5>
+      <div className="container p-3 my-3 bg-dark text-white">
         <form onSubmit={this.handleOnSubmit}>
-          <div className="ml-2 mr-2">
-            <label className="form-label>">Show/Movie Title:</label>
+          <div>
+            <label className="form-label>">List the Show or Movie You Are Binging Right Now:</label>
             <input type="text" id="title" onChange={event => this.handleOnTitleChange(event)} className="form-control"/>
             <label className="form-label">Post:</label>
             <input type="text" onChange={event => this.handleOnContentChange(event)} className="form-control" /><br />
