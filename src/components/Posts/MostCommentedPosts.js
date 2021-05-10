@@ -13,7 +13,7 @@ class MostCommentedPosts extends Component {
   render() {
     return(
       <div>
-        <h2>Posts</h2>
+        <h1 className="most-comments-header">Most Commented Posts</h1>
         {this.renderMostCommentedPosts()}
       </div>
     );

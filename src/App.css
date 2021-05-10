@@ -1,7 +1,9 @@
 
 
 .App {
-  padding: 10px;
+  padding: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .home-page-title {
@@ -15,6 +17,42 @@
 img {
   height: 50px;
   width: 50px;
+}
+
+hr {
+  border-top: 2.5px solid;
+}
+
+.comment-container {
+  margin-bottom: 10px;
+}
+
+.comment-text {
+  color: white;
+}
+
+.post-container {
+  margin-bottom: 10px;
+}
+
+.most-comments-header {
+  text-align: center
+}
+
+.most-commented-title-container {
+  overflow: hidden
+}
+
+.most-commented-title {
+  float: left;
+}
+
+.most-commented-create-date {
+  float: right;
+}
+
+.page-button {
+  padding: 10px;
 }
 
 .App-logo {

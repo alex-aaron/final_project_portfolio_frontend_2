@@ -10,7 +10,9 @@ class PostShow extends Component {
         post: {
           id: "",
           title: "",
-          text: ""
+          text: "",
+          createdAt: "",
+          updatedAt: ""
         },
         comments: []
       }
@@ -30,7 +32,9 @@ class PostShow extends Component {
         post: {
           id: fetchedPost.id,
           title: fetchedPost.title,
-          text: fetchedPost.content
+          text: fetchedPost.content,
+          createdAt: fetchedPost.created_at,
+          updatedAt: fetchedPost.updated_at
         },
         comments: fetchedPost.comments
       })});

@@ -31,7 +31,6 @@ class MostCommentsContainer extends Component {
     console.log(this.state);
     return (
       <div>
-        <h1>Most Commented Posts Go Here</h1>
         <MostCommentedPosts mostCommentedPosts={this.state.posts} />
       </div>
     )
