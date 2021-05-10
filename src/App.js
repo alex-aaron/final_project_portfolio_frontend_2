@@ -3,11 +3,11 @@ import PostShow from './components/Posts/PostShow'
 import MostCommentsContainer from './containers/MostCommentsContainer'
 // import PostInput from './components/Posts/PostInput';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-//import NewPostButton from './components/NewPostButton';
 
 function App() {
   return (

@@ -3,13 +3,16 @@ import Posts from '../components/Posts/Posts';
 import { connect } from 'react-redux'
 import PostInput from '../components/Posts/PostInput'
 import fetchPosts from '../actions/fetchPosts'
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 class PostContainer extends Component {
 
   render() {
     return (
       <div>
-        <h1>Posts Go Here</h1>
+        <h1 className="home-page-title">Binge Tracker</h1>
         <PostInput addPost={this.props.addPost} />
         <Posts posts={this.props.posts} fetchPosts={this.props.fetchPosts} />
       </div>

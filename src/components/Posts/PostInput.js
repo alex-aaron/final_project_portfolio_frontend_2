@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 class PostInput extends Component {
@@ -36,14 +37,16 @@ class PostInput extends Component {
 
   render() {
     return (
-      <div>
-        <h1>What are you watching right now?</h1>
+      <div className="post-input-container">
+        <h5>What are you watching right now?</h5>
         <form onSubmit={this.handleOnSubmit}>
-          <label>Show/Movie Title:</label>
-          <input type="text" id="title" onChange={event => this.handleOnTitleChange(event)}/><br /><br />
-          <label>Post:</label>
-          <input type="text" onChange={event => this.handleOnContentChange(event)} /><br /><br />
-          <input type="submit"/>
+          <div className="ml-2 mr-2">
+            <label className="form-label>">Show/Movie Title:</label>
+            <input type="text" id="title" onChange={event => this.handleOnTitleChange(event)} className="form-control"/>
+            <label className="form-label">Post:</label>
+            <input type="text" onChange={event => this.handleOnContentChange(event)} className="form-control" /><br />
+            <button type="submit" className="btn btn-primary">Submit</button>
+          </div>
         </form>
       </div>
     );
