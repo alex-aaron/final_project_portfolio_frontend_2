@@ -19,9 +19,15 @@ class Posts extends Component {
 
   componentDidMount() {
     console.log("Component Mounted!");
-    this.props.fetchPosts()
+    this.props.fetchPosts();
   }
-  
+
+  // componentDidUpdate(prevState, currentState) {
+  //   if (prevState !== currentState) {
+  //     window.
+  //   }
+  // }
+
   
   render() {
     return(

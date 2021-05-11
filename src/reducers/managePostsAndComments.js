@@ -15,7 +15,7 @@ export default function managePostsAndComments(state = {
       case 'ADD_POST':
 
         const post = {
-            id: cuid(),
+            id: action.post.id,
             title: action.post.title,
             text: action.post.text
         }
@@ -34,7 +34,7 @@ export default function managePostsAndComments(state = {
     
       case 'ADD_COMMENT':
         const comment = {
-          id: cuid(),
+          id: action.comment.id,
           postId: action.comment.postId,
           text: action.comment.text
         }

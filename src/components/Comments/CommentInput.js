@@ -19,7 +19,7 @@ class CommentInput extends Component {
 
   handleOnCommentSubmit = event => {
     event.preventDefault();
-    this.props.addComment({postId: this.state.postId, text: this.state.text});
+    // this.props.addComment({postId: this.state.postId, text: this.state.text});
     fetch('http://localhost:3001/comments', {
       method: "POST",
       headers: {
@@ -27,6 +27,13 @@ class CommentInput extends Component {
       },
       body: JSON.stringify({post_id: this.state.postId, content: this.state.text})
     })
+      .then(response => response.json())
+      .then(comment => this.props.addComment({id: comment.id, postId: comment.post_id, text: comment.content}))
+    this.setState({
+      postId: "",
+      text: ""
+    })
+    document.location.reload(true)
   }
 
   render() {
@@ -35,7 +42,7 @@ class CommentInput extends Component {
         <form onSubmit={event => this.handleOnCommentSubmit(event)}>
           <div>
             <label className="form-label>">Add Comment:</label>
-            <input type="text" id="content" onChange={event => this.handleOnCommentChange(event)} className="form-control"/><br />
+            <input type="text" id="content" onChange={event => this.handleOnCommentChange(event)} className="form-control" value={this.state.text}/><br />
             <button type="submit" className="btn btn-primary">Submit</button>
           </div>
         </form>

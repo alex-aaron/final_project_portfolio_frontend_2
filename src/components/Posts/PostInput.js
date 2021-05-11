@@ -25,13 +25,19 @@ class PostInput extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    this.props.addPost({title: this.state.title, text: this.state.text});
+    // this.props.addPost({title: this.state.title, text: this.state.text});
     fetch('http://localhost:3001/posts', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({title: this.state.title, content: this.state.text})
+    })
+      .then(response => response.json())
+      .then(data => this.props.addPost({id: data.id, title: data.title, text: data.content}))
+    this.setState({
+      title: "",
+      text: ""
     })
   }
 
@@ -41,9 +47,9 @@ class PostInput extends Component {
         <form onSubmit={this.handleOnSubmit}>
           <div>
             <label className="form-label>">List the Show or Movie You Are Binging Right Now:</label>
-            <input type="text" id="title" onChange={event => this.handleOnTitleChange(event)} className="form-control"/>
+            <input type="text" id="title" onChange={event => this.handleOnTitleChange(event)} className="form-control" value={this.state.title}/>
             <label className="form-label">Post:</label>
-            <input type="text" onChange={event => this.handleOnContentChange(event)} className="form-control" /><br />
+            <input type="text" onChange={event => this.handleOnContentChange(event)} className="form-control" value={this.state.text}/><br />
             <button type="submit" className="btn btn-primary">Submit</button>
           </div>
         </form>
