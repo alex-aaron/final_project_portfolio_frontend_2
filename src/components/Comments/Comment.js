@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment'
-// import ReviewsContainer from '../../containers/ReviewsContainer';
 
 class Post extends Component {
-
 
   render() {
 

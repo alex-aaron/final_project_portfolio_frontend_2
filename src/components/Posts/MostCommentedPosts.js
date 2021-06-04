@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MostCommentedPost from './MostCommentedPost'
-import { Link } from 'react-router-dom';
 
 class MostCommentedPosts extends Component {
 

@@ -6,6 +6,7 @@ export default function managePostsAndComments(state = {
     loading: false
   }, action) {
     switch (action.type) {
+      
       case 'LOADING_POSTS':
       return {
         ...state,

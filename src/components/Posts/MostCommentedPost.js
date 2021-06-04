@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Moment from 'react-moment'
 
 class MostCommentedPost extends Component {
 

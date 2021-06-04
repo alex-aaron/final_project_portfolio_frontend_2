@@ -6,7 +6,6 @@ import CommentInput from '../Comments/CommentInput'
 import Comment from '../Comments/Comment'
 
 class CommentContainer extends Component {
-  //function rendering comments
   renderComments = () => {
     return (
       this.props.comments.map(comment => 
@@ -16,7 +15,6 @@ class CommentContainer extends Component {
   }
 
   render() {
-    console.log(this.props.comments)
     return (
       <div>
         <CommentInput postId={this.props.postId} addComment={this.props.addComment} />

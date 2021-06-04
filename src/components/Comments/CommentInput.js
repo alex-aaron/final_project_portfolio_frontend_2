@@ -19,7 +19,6 @@ class CommentInput extends Component {
 
   handleOnCommentSubmit = event => {
     event.preventDefault();
-    // this.props.addComment({postId: this.state.postId, text: this.state.text});
     fetch('http://localhost:3001/comments', {
       method: "POST",
       headers: {

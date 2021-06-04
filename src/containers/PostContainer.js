@@ -25,7 +25,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   addPost: post => dispatch({ type: "ADD_POST", post}),
-  deleteRestaurant: id => dispatch({ type: "DELETE_RESTAURANT", id}),
   fetchPosts: () => dispatch(fetchPosts())
 })
 

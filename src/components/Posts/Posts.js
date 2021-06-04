@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Post from '../Posts/Post';
-import { Link } from 'react-router-dom';
 
 class Posts extends Component {
 
@@ -17,7 +16,6 @@ class Posts extends Component {
       this.props.fetchPosts();
     } 
   }
-
 
   render() {
     return(

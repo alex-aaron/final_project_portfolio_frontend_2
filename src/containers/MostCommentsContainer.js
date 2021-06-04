@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react';
 import MostCommentedPosts from '../components/Posts/MostCommentedPosts'
-// import { connect } from 'react-redux'
-// import fetchPosts from '../actions/fetchPosts'
 
 class MostCommentsContainer extends Component {
 
@@ -36,15 +34,5 @@ class MostCommentsContainer extends Component {
     )
   }
 }
-
-// const mapStateToProps = state => {
-//   return { posts: state.posts }
-// }
-
-// const mapDispatchToProps = dispatch => ({
-//   addPost: post => dispatch({ type: "ADD_POST", post}),
-//   deleteRestaurant: id => dispatch({ type: "DELETE_RESTAURANT", id}),
-//   fetchPosts: () => dispatch(fetchPosts())
-// })
 
 export default MostCommentsContainer;
