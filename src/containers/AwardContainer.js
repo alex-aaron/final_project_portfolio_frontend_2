@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AwardInput from '../components/Awards/AwardInput'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -8,6 +9,7 @@ class AwardContainer extends Component {
     return (
       <div>
           <h1>Award Container Component</h1>
+          <AwardInput />
       </div>
     )
   }

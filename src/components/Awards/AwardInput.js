@@ -13,6 +13,10 @@ class AwardInput extends Component {
   render() {
     return (
       <div>
+          <form>
+              <label>How many awards categories would you like to create?</label>
+              <input type="text"></input>
+          </form>
       </div>
     );
   }
