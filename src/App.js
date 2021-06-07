@@ -2,6 +2,7 @@ import PostContainer from './containers/PostContainer';
 import PostShow from './components/Posts/PostShow'
 import MostCommentsContainer from './containers/MostCommentsContainer'
 import NavBar from './components/NavBar'
+import AwardContainer from './containers/AwardContainer'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
