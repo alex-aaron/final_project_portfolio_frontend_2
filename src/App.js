@@ -18,6 +18,7 @@ function App() {
         <Route exact path="/" component={PostContainer} />
         <Route exact path={`/posts/:postId`} render={routerProps => <PostShow {...routerProps} />} />
         <Route exact path="/most_comments" component={MostCommentsContainer} />
+        <Route exact path="/awards" component={AwardContainer} />
       </div>
     </Router>
   );
