@@ -5,17 +5,21 @@ class AwardInput extends Component {
   constructor(props) {
     super() 
       this.state = {
-        title: "",
-        text: ""
+        awardCategorries: 0
       }
+  }
+
+  handleOnSubmit = event => {
+      
   }
 
   render() {
     return (
       <div>
-          <form>
-              <label>How many awards categories would you like to create?</label>
-              <input type="text"></input>
+          <form onSubmit={this.handleOnSubmit}>
+              <label>How many awards categories would you like to create?</label><br></br>
+              <input type="text"></input><br></br>
+              <button type="submit">Submit</button>
           </form>
       </div>
     );
