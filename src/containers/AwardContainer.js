@@ -10,6 +10,7 @@ class AwardContainer extends Component {
       <div>
           <h1>Award Container Component</h1>
           <AwardInput />
+          
       </div>
     )
   }

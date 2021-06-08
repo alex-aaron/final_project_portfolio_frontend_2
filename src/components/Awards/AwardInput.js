@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
+import AwardCategoryInputs from '/AwardCategoryInputs'
 
 class AwardInput extends Component {
 
   constructor(props) {
     super() 
       this.state = {
-        awardCategorries: 0
+        awardCategories: 0
       }
   }
 
-  handleOnSubmit = event => {
-      
-  }
+handleOnSubmit = event => {
+  this.setState({
+    awardCategories: event.target.value
+  })
+}
 
   render() {
+
+    let awardCategoryInputs;
+
+    if (this.state.awardCategories > 0) {
+      awardCategoryInputs = <AwardCategoryInputs awardCategories={this.state.awardCategories} />
+    }
+
     return (
       <div>
           <form onSubmit={this.handleOnSubmit}>
