@@ -6,7 +6,6 @@ class AwardInput extends Component {
     super() 
       this.state = {
         award: {
-          year: "",
           category: "",
           nominees: {
             nominee1: "",
@@ -33,7 +32,7 @@ handleOnSubmit = event => {
         <form onYearSubmit={this.handleYearSubmit}>
           <label>Year: </label>
           <input type="text"></input>
-          <label>Category Name:</label>
+          <label>Category Name: </label>
           <input type="text"></input><br></br>
           <label>Nominee 1:</label>
           <input type="text"></input><br></br>
