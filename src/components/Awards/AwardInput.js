@@ -34,24 +34,21 @@ handleOnSubmit = event => {
           <label>Year: </label>
           <input type="text"></input>
           <button type="submit">Submit</button>
-        </form>
-
-        <form onCategorySubmit={this.handleOnCategorySubmit}>
-            <label>Category Name:</label>
-            <input type="text"></input><br></br>
-            <label>Nominee 1:</label>
-            <input type="text"></input><br></br>
-            <label>Nominee 2:</label>
-            <input type="text"></input><br></br>
-            <label>Nominee 3:</label>
-            <input type="text"></input><br></br>
-            <label>Nominee 4:</label>
-            <input type="text"></input><br></br>
-            <label>Nominee 5:</label>
-            <input type="text"></input><br></br>
-            <label>Nominee 5:</label>
-            <input type="text"></input><br></br>
-            <button type="submit">Submit</button>
+          <label>Category Name:</label>
+          <input type="text"></input><br></br>
+          <label>Nominee 1:</label>
+          <input type="text"></input><br></br>
+          <label>Nominee 2:</label>
+          <input type="text"></input><br></br>
+          <label>Nominee 3:</label>
+          <input type="text"></input><br></br>
+          <label>Nominee 4:</label>
+          <input type="text"></input><br></br>
+          <label>Nominee 5:</label>
+          <input type="text"></input><br></br>
+          <label>Nominee 5:</label>
+          <input type="text"></input><br></br>
+          <button type="submit">Submit</button>
         </form>
       </div>
     );
