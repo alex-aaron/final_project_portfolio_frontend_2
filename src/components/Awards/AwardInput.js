@@ -18,15 +18,7 @@ class AwardInput extends Component {
   }
 
 handleOnSubmit = event => {
-  this.setState({
-    awardCategories: event.target.value
-  })
-}
-
-handleOnChange = event => {
-  this.setState({
-
-  })
+  console.log(this.state)
 }
 
   render() {
@@ -35,7 +27,7 @@ handleOnChange = event => {
       <div>
         <form onYearSubmit={this.handleYearSubmit}>
           <label>Category Name: </label>
-          <input type="text" id="category"></input><br></br>
+          <input type="text" id="category" onChange={this.handleOnChange}></input><br></br>
           <label>Nominee 1:</label>
           <input type="text" id="nominee1"></input><br></br>
           <label>Nominee 2:</label>
