@@ -33,7 +33,6 @@ handleOnSubmit = event => {
         <form onYearSubmit={this.handleYearSubmit}>
           <label>Year: </label>
           <input type="text"></input>
-          <button type="submit">Submit</button>
           <label>Category Name:</label>
           <input type="text"></input><br></br>
           <label>Nominee 1:</label>
