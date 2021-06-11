@@ -34,8 +34,6 @@ handleOnSubmit = event => {
           <input type="text" id="nominee2"></input><br></br>
           <label>Nominee 3:</label>
           <input type="text" id="nominee3"></input><br></br>
-          <label>Nominee 4:</label>
-          <input type="text" id="nominee4"></input><br></br>
           <button type="submit">Submit</button>
         </form>
       </div>
