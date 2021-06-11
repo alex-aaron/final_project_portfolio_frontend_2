@@ -38,8 +38,6 @@ handleOnSubmit = event => {
           <input type="text" id="nominee4"></input><br></br>
           <label>Nominee 5:</label>
           <input type="text" id="nominee5"></input><br></br>
-          <label>Winner:</label>
-          <input type="text" id="winner"></input><br></br>
           <button type="submit">Submit</button>
         </form>
       </div>
