@@ -30,8 +30,6 @@ handleOnSubmit = event => {
           <input type="text" id="category" onChange={this.handleOnChange}></input><br></br>
           <label>Nominee 1:</label>
           <input type="text" id="nominee1"></input><br></br>
-          <label>Nominee 2:</label>
-          <input type="text" id="nominee2"></input><br></br>
         </form>
       </div>
     );
